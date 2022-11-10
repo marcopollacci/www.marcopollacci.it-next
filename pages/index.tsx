@@ -32,7 +32,8 @@ export default function Home(props: { svg: string }) {
               <a
                 ref={aSvg}
                 href="https://wakatime.com/@2729ac0c-0ebb-4599-b424-3a6648627bff"
-              ></a>
+                aria-label="Wakatime profile"
+              />
               <ul className={styles.socialicons}>
                 <li>
                   <a
@@ -110,7 +111,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      svg,
+      svg: svg.replace(/<\/?a[^>]*>/g, ""),
     },
     revalidate: 43200, // 12h in seconds
   };

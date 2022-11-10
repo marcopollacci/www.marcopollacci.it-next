@@ -29,6 +29,11 @@
 
 .skills {
     margin-bottom: 2rem;
+    font-size: var(--double-unit);
+    font-weight: 600;
+    li {
+        margin-bottom: 0.5rem;
+    }
 }
 
 .socialicons{
@@ -83,7 +88,7 @@
   }
 }
 .footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 @media screen and (max-width: 1024px) {

@@ -1,6 +1,9 @@
 :root {
   --background-color: #F6F9F9;
   --base-unit: 8px;
+  --half-unit: calc(var(--base-unit) / 2);
+  --double-unit: calc(var(--base-unit) * 2);
+  --triple-unit: calc(var(--base-unit) * 3);
 }
 
 html,
@@ -23,6 +26,7 @@ a {
 
 h1 {
   font-size: calc(var(--base-unit) * 6);
+  margin-bottom: var(--base-unit);
 }
 
 

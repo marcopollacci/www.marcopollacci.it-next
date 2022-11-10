@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
+import me from '../assets/me.jpeg'
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -10,18 +11,16 @@ export default function Home() {
         <div className={styles.flexdiv}>
           <div>
             <Image
-              width={200}
-              height={200}
               className={styles.me}
-              src="/images/me.jpeg"
+              src={me}
               loading="eager"
               alt="me"
             />
           </div>
           <div>
             <h1 className="title">Marco Pollacci</h1>
-            <p>Javascript Web Application Developer</p>
-            <span>Main skills:</span>
+            <span>Javascript Web Application Developer</span>
+            <p style={{ fontSize: 'var(--triple-unit)', marginBottom: 0 }}>Main skills:</p>
             <ul className={styles.skills}>
               <li>Angular / NextJS / Lit</li>
               <li>NodeJS with NestJS</li>

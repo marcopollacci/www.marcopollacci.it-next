@@ -1,19 +1,14 @@
 /** @type {import('next').NextConfig} */
-
-const withPWA = require("next-pwa")({
-  dest: "public",
-});
-
-const nextConfig = withPWA({
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["wakatime.com"],
+    domains: ['wakatime.com'],
   },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
   },
-});
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

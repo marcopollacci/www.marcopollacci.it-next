@@ -21,78 +21,82 @@
 }
 
 .me {
-    max-width: 200px;
-    max-height: 200px;
-    border-radius: 125px;
-    cursor: pointer;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 125px;
+  cursor: pointer;
 }
 
 .skills {
-    margin-bottom: 2rem;
-    font-size: var(--double-unit);
-    font-weight: 600;
-    li {
-        margin-bottom: 0.5rem;
-    }
+  margin-bottom: 2rem;
+  font-size: var(--double-unit);
+  font-weight: 600;
+  li {
+    margin-bottom: 0.5rem;
+  }
 }
 
-.socialicons{
-    padding-inline-start: 0;
+.socialicons {
+  padding-inline-start: 0;
   li {
-      display: inline;
+    display: inline;
   }
   a {
-      display: inline-block;
-      margin-right: 10px;
-      text-indent: -9999px;
+    display: inline-block;
+    margin-right: 10px;
+    text-indent: -9999px;
   }
   .linkedin {
-      background-image: url('/images/linkedin-shiny-icon-logo-5.png');
-      width: 20px;
-      height: 20px;
+    background-image: url("/images/linkedin-shiny-icon-logo-5.png");
+    width: 20px;
+    height: 20px;
   }
-  .github{
-      background-image: url('/images/github.png');
-      width: 20px;
-      height: 20px;
+  .github {
+    background-image: url("/images/github.png");
+    width: 20px;
+    height: 20px;
   }
   .twitter {
-      background-image: url('/images/twitter3.png');
-      width: 20px;
-      height: 20px;
+    background-image: url("/images/twitter3.png");
+    width: 20px;
+    height: 20px;
   }
   .facebook {
-      background-image: url('/images/facebook.png');
-      width: 10px;
-      height: 19px;
+    background-image: url("/images/facebook.png");
+    width: 10px;
+    height: 19px;
   }
   .googleplus {
-      background-image: url('/images/googleplus.png');
-      width: 21px;
-      height: 19px;
+    background-image: url("/images/googleplus.png");
+    width: 21px;
+    height: 19px;
   }
   .dribbble {
-      background-image: url('/images/dribbble.png');
-      width: 21px;
-      height: 19px;
+    background-image: url("/images/dribbble.png");
+    width: 21px;
+    height: 19px;
   }
   .instagram {
-      background-image: url('/images/insta.png');
-      width: 20px;
-      height: 20px;
+    background-image: url("/images/insta.png");
+    width: 20px;
+    height: 20px;
   }
   .flickr {
-      background-image: url('/images/flickr-logo.png');
-      width: 20px;
-      height: 20px;
+    background-image: url("/images/flickr-logo.png");
+    width: 20px;
+    height: 20px;
   }
 }
 .footer {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
+  .main {
+    padding: 1rem 0;
+  }
   .flexdiv {
+    gap: 1rem;
     flex-direction: column;
     align-items: center;
   }

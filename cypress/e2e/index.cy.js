@@ -1,12 +1,17 @@
 /// <reference types="cypress" />
 
-describe("Navigation", () => {
-  it("Home Page Test", () => {
+describe("Home Page Test", () => {
+  beforeEach(() => {
     // Start from the index page
     cy.visit("http://localhost:3000/");
-
-    // Find a link with an href attribute containing "about" and click it
+  });
+  it("Check if image show", () => {
     cy.get('[alt="me"]').should("have.attr", "src").should("include", "me");
+  });
+  it("Check if my name show", () => {
     cy.get("h1").contains("Marco Pollacci");
+  });
+  it("Check number of social link", () => {
+    cy.get("ul li a").should("have.length", 5);
   });
 });

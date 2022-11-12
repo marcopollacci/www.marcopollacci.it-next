@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import me from "../assets/me.jpeg";
+import Link from "../components/link";
 import styles from "../styles/Home.module.scss";
 
 export default function Home(props: { svg: string }) {
@@ -36,58 +37,39 @@ export default function Home(props: { svg: string }) {
               />
               <ul className={styles.socialicons}>
                 <li>
-                  <a
-                    className={styles.dribbble}
-                    target="_blank"
+                  <Link
                     href="/cv_marco_pollacci_2022.pdf"
-                    title="CV - PDF"
-                  >
-                    Download CV
-                  </a>
+                    title="Download my CV"
+                    classname="dribbble"
+                  />
                 </li>
                 <li>
-                  <a
-                    className={styles.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
+                  <Link
                     href="https://www.linkedin.com/in/marcopollacci/"
                     title="Linkedin"
-                  >
-                    Linkedin
-                  </a>
+                    classname="linkedin"
+                  />
                 </li>
                 <li>
-                  <a
-                    className={styles.github}
-                    target="_blank"
-                    rel="noreferrer"
+                  <Link
                     href="https://github.com/marcopollacci"
                     title="GitHub"
-                  >
-                    GitHub
-                  </a>
+                    classname="github"
+                  />
                 </li>
                 <li>
-                  <a
-                    className={styles.twitter}
-                    target="_blank"
-                    rel="noreferrer"
+                  <Link
                     href="https://twitter.com/Cerins_Marco"
                     title="Twitter"
-                  >
-                    Twitter
-                  </a>
+                    classname="twitter"
+                  />
                 </li>
                 <li>
-                  <a
-                    className={styles.instagram}
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://www.instagram.com/marco_pollacci/"
+                  <Link
+                    href="https://www.instagram.com/marco_pollacci"
                     title="Instagram"
-                  >
-                    Instagram
-                  </a>
+                    classname="instagram"
+                  />
                 </li>
               </ul>
               <div className={styles.footer}>

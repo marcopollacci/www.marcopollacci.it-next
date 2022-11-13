@@ -74,7 +74,7 @@ export default function Home(props: { svg: string }) {
               </ul>
               <div className={styles.footer}>
                 <p>
-                  © <span id="date">{year}</span> - Marco Pollacci
+                  © <span id="date">{year}</span>
                 </p>
               </div>
             </div>

@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>Marco Pollacci</title>
         <meta name="description" content="Marco Pollacci's personal website" />
+        <noscript>Plese activate Javascript</noscript>
       </Head>
       <Component {...pageProps} />
       <Analytics />

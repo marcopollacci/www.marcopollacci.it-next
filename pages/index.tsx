@@ -1,8 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import me from "../assets/me.jpeg";
-// import Link from "../components/link";
-import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 
 export default function Home(props: { svg: string }) {

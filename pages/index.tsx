@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import me from "../assets/me.jpeg";
-import Link from "../components/link";
+// import Link from "../components/link";
+import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 
 export default function Home(props: { svg: string }) {
@@ -40,35 +41,35 @@ export default function Home(props: { svg: string }) {
                   <Link
                     href="/cv_marco_pollacci_2022.pdf"
                     title="Download my CV"
-                    classname="dribbble"
+                    className={styles.dribble}
                   />
                 </li>
                 <li>
                   <Link
                     href="https://www.linkedin.com/in/marcopollacci/"
                     title="Linkedin"
-                    classname="linkedin"
+                    className={styles.linkedin}
                   />
                 </li>
                 <li>
                   <Link
                     href="https://github.com/marcopollacci"
                     title="GitHub"
-                    classname="github"
+                    className={styles.github}
                   />
                 </li>
                 <li>
                   <Link
                     href="https://twitter.com/Cerins_Marco"
                     title="Twitter"
-                    classname="twitter"
+                    className={styles.twitter}
                   />
                 </li>
                 <li>
                   <Link
                     href="https://www.instagram.com/marco_pollacci"
                     title="Instagram"
-                    classname="instagram"
+                    className={styles.instagram}
                   />
                 </li>
               </ul>

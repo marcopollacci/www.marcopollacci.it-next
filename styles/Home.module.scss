@@ -1,3 +1,5 @@
+@use "./functions.scss" as fn;
+
 .container {
   padding: 0 2rem;
 }
@@ -28,7 +30,7 @@
 
 .skills {
   margin-bottom: 2rem;
-  font-size: var(--double-unit);
+  font-size: fn.units(2);
   font-weight: 600;
   li {
     margin-bottom: 0.5rem;

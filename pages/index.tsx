@@ -30,7 +30,7 @@ export default function Home(props: { svg: string }) {
                 <li>Angular / NextJS / Lit</li>
                 <li>NodeJS with NestJS</li>
               </ul>
-              <a
+              <Link
                 ref={aSvg}
                 href="https://wakatime.com/@2729ac0c-0ebb-4599-b424-3a6648627bff"
                 aria-label="Wakatime profile"

@@ -1,0 +1,9 @@
+@use "./functions.scss" as fn;
+
+$px20: fn.units(2.5);
+
+@mixin social($urlImage) {
+  background-image: url($urlImage);
+  width: $px20;
+  height: $px20;
+}

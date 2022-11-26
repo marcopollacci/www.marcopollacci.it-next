@@ -21,13 +21,11 @@ export default function Home(props: { svg: string }) {
               <Image className={styles.me} src={me} loading="eager" alt="me" />
             </div>
             <div>
-              <h1 className="title">Marco Pollacci</h1>
+              <h1>Marco Pollacci</h1>
               <span>Javascript Web Application Developer</span>
-              <p style={{ fontSize: "var(--triple-unit)", marginBottom: 0 }}>
-                Main skills:
-              </p>
+              <p style={{ marginBottom: 0 }}>Main skills:</p>
               <ul className={styles.skills}>
-                <li>Angular / NextJS / Lit</li>
+                <li>NextJS / Lit / Angular</li>
                 <li>NodeJS with NestJS</li>
               </ul>
               <Link

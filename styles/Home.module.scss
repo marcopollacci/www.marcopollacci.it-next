@@ -1,12 +1,17 @@
 @use "./functions.scss" as fn;
+@use "./mixins.scss" as mx;
+
+$px200: fn.units(25);
+$px40: fn.units(5);
+$px16: fn.units(2);
 
 .container {
-  padding: 0 2rem;
+  padding: 0 fn.units(4);
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: fn.units(8) 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -17,23 +22,23 @@
 .flexdiv {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
-  max-width: 800px;
+  gap: $px40;
+  max-width: fn.units(100);
   flex-wrap: nowrap;
 }
 
 .me {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 125px;
+  max-width: $px200;
+  max-height: $px200;
+  border-radius: fn.units(15.6);
 }
 
 .skills {
-  margin-bottom: 2rem;
+  margin-bottom: $px40;
   font-size: fn.units(2);
   font-weight: 600;
   li {
-    margin-bottom: 0.5rem;
+    margin-bottom: fn.units();
   }
 }
 
@@ -44,73 +49,48 @@
   }
   a {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: fn.units(1);
     text-indent: -9999px;
   }
 
   .linkedin {
-    background-image: url("/images/linkedin-shiny-icon-logo-5.png");
-    width: 20px;
-    height: 20px;
+    @include mx.social("/images/linkedin-shiny-icon-logo-5.png");
   }
   .github {
-    background-image: url("/images/github.png");
-    width: 20px;
-    height: 20px;
+    @include mx.social("/images/github.png");
   }
   .twitter {
-    background-image: url("/images/twitter3.png");
-    width: 20px;
-    height: 20px;
-  }
-  .facebook {
-    background-image: url("/images/facebook.png");
-    width: 10px;
-    height: 19px;
-  }
-  .googleplus {
-    background-image: url("/images/googleplus.png");
-    width: 21px;
-    height: 19px;
+    @include mx.social("/images/twitter3.png");
   }
   .dribble {
-    background-image: url("/images/dribbble.png");
-    width: 21px;
-    height: 19px;
+    @include mx.social("/images/dribble.png");
   }
   .instagram {
-    background-image: url("/images/insta.png");
-    width: 20px;
-    height: 20px;
-  }
-  .flickr {
-    background-image: url("/images/flickr-logo.png");
-    width: 20px;
-    height: 20px;
+    @include mx.social("/images/insta.png");
   }
 }
 .footer {
-  margin-top: 1rem;
+  margin-top: $px16;
 }
 
 @media screen and (max-width: 1024px) {
   .main {
-    padding: 1rem 0;
+    padding: $px16 0;
 
     h1 {
-      margin: 0 0 0.3rem 0;
+      margin: 0 0 fn.units(0.6) 0;
     }
 
     ul {
-      margin-bottom: 1rem;
+      margin-bottom: $px16;
     }
   }
 
   .socialicons {
-    margin: 0.5rem;
+    margin: fn.units(0.6);
   }
   .flexdiv {
-    gap: 1rem;
+    gap: $px16;
     flex-direction: column;
     align-items: center;
   }

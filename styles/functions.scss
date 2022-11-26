@@ -1,3 +1,18 @@
+@use "./variables.scss";
+
 @function units($amount: 1) {
-  @return calc(var(--base-unit) * #{$amount});
+  @return calc(#{prop-var(base-unit, variables.$base-unit)} * #{$amount});
+}
+
+//variables
+@function prop-var($name, $fallback: null) {
+  @return if(
+    $fallback,
+    var(prop-var-name($name), #{$fallback}),
+    var(prop-var-name($name))
+  );
+}
+
+@function prop-var-name($name) {
+  @return --#{variables.$library-prefix}-#{$name};
 }

@@ -50,7 +50,6 @@ $px16: fn.units(2);
   a {
     display: inline-block;
     margin-right: fn.units(1);
-    text-indent: -9999px;
   }
 
   .linkedin {
@@ -86,9 +85,15 @@ $px16: fn.units(2);
     }
   }
 
-  .socialicons {
-    margin: fn.units(0.6);
+  .socialicons,
+  .skills {
+    margin: fn.units(2) 0;
   }
+
+  .socialicons li {
+    margin-right: fn.units(1);
+  }
+
   .flexdiv {
     gap: $px16;
     flex-direction: column;

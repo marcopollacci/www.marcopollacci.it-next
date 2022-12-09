@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import me from "../assets/me.jpeg";
+import { SOCIAL } from "../config/social";
 import styles from "../styles/Home.module.scss";
 
 export default function Home(props: { svg: string }) {
@@ -34,41 +35,15 @@ export default function Home(props: { svg: string }) {
                 aria-label="Wakatime profile"
               />
               <ul className={styles.socialicons}>
-                <li>
-                  <Link
-                    href="/cv_marco_pollacci_2022.pdf"
-                    title="Download my CV"
-                    className={styles.dribble}
-                  />
-                </li>
-                <li>
-                  <Link
-                    href="https://www.linkedin.com/in/marcopollacci/"
-                    title="Linkedin"
-                    className={styles.linkedin}
-                  />
-                </li>
-                <li>
-                  <Link
-                    href="https://github.com/marcopollacci"
-                    title="GitHub"
-                    className={styles.github}
-                  />
-                </li>
-                <li>
-                  <Link
-                    href="https://twitter.com/Cerins_Marco"
-                    title="Twitter"
-                    className={styles.twitter}
-                  />
-                </li>
-                <li>
-                  <Link
-                    href="https://www.instagram.com/marco_pollacci"
-                    title="Instagram"
-                    className={styles.instagram}
-                  />
-                </li>
+                {SOCIAL.map((social, index) => (
+                  <li key={index}>
+                    <Link
+                      href={social.href}
+                      title={social.title}
+                      className={styles[social.className]}
+                    />
+                  </li>
+                ))}
               </ul>
               <div className={styles.footer}>
                 <p>

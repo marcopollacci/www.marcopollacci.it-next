@@ -13,21 +13,21 @@
     "e2e:headless": "start-server-and-test start http://127.0.0.1:3000 cypress:headless"
   },
   "dependencies": {
-    "@types/node": "^18.13.0",
+    "@types/node": "^18.14.2",
     "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.10",
-    "@vercel/analytics": "^0.1.8",
-    "eslint": "^8.34.0",
-    "eslint-config-next": "^13.1.6",
-    "next": "^13.1.6",
+    "@types/react-dom": "^18.0.11",
+    "@vercel/analytics": "^0.1.10",
+    "eslint": "^8.35.0",
+    "eslint-config-next": "^13.2.1",
+    "next": "^13.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.31.3",
     "typescript": "^4.9.5"
   },
   "devDependencies": {
-    "cypress": "^12.5.1",
-    "sass": "^1.58.0",
-    "start-server-and-test": "^1.15.3"
+    "cypress": "^12.7.0",
+    "sass": "^1.58.3",
+    "start-server-and-test": "^2.0.0"
   }
 }

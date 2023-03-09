@@ -21,11 +21,6 @@ export const SOCIAL: Social[] = [
     className: "twitter",
   },
   {
-    href: "https://twitter.com/Cerins_Marco",
-    title: "Twitter",
-    className: "twitter",
-  },
-  {
     href: "https://www.instagram.com/marco_pollacci",
     title: "Instagram",
     className: "instagram",

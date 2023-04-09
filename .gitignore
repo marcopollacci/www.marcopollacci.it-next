@@ -15,6 +15,10 @@
 # production
 /build
 
+# cypress
+/cypress/videos
+/cypress/screenshots
+
 # misc
 .DS_Store
 *.pem

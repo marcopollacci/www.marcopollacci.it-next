@@ -3,7 +3,7 @@
 describe("Home Page Test", () => {
   beforeEach(() => {
     // Start from the index page
-    cy.visit("http://localhost:3000/");
+    cy.visit("/");
   });
   it("Check if image show", () => {
     cy.get('[alt="me"]').should("have.attr", "src").should("include", "me");
@@ -12,6 +12,6 @@ describe("Home Page Test", () => {
     cy.get("h1").contains("Marco Pollacci");
   });
   it("Check number of social link", () => {
-    cy.get("ul li a").should("have.length", 5);
+    cy.get("ul li a").should("have.length", 4);
   });
 });

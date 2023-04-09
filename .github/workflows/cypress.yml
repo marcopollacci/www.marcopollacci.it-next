@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -14,7 +14,6 @@ jobs:
           cache: "npm"
 
       - name: npm install, build, and test
-      - uses: actions/setup-node@v3
         run: |
           npm install
           npm run build

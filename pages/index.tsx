@@ -34,8 +34,8 @@ export default function Home(props: { svg: string }) {
               aria-label="Wakatime profile"
             />
             <ul className={styles.socialicons}>
-              {SOCIAL.map((social, index) => (
-                <li key={index}>
+              {SOCIAL.map((social) => (
+                <li key={social.title}>
                   <Link
                     href={social.href}
                     title={social.title}

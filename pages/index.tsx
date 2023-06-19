@@ -22,7 +22,7 @@ export default function Home(props: { svg: string }) {
           </div>
           <div>
             <h1>Marco Pollacci</h1>
-            <span>Javascript Web Application Developer</span>
+            <span>Expert in Javascript Web Application Development</span>
             <p style={{ marginBottom: 0 }}>Main skills:</p>
             <ul className={styles.skills}>
               <li>NextJS / Lit / Angular</li>

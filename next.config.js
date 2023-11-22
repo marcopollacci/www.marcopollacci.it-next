@@ -3,12 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['wakatime.com'],
+    remotePatterns: [
+      {
+        hostname: "wakatime.com",
+      },
+    ],
   },
   i18n: {
     locales: ["en"],
     defaultLocale: "en",
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

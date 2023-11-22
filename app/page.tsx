@@ -1,17 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import me from "../assets/me.jpeg";
 import { SOCIAL } from "../config/social";
 import styles from "../styles/Home.module.scss";
+import WakaComponent from "./_components/waka";
 
-export default function Home(props: { svg: string }) {
+export default async function HomePage() {
   const year = new Date().getFullYear();
-  const aSvg = useRef<HTMLAnchorElement>(null);
 
-  useEffect(() => {
-    aSvg.current!.innerHTML = props.svg;
-  }, [props.svg]);
+  const res = await fetch(
+    "https://wakatime.com/badge/user/2729ac0c-0ebb-4599-b424-3a6648627bff.svg",
+    {
+      next: {
+        revalidate: 43200, // 12h in seconds
+      },
+    }
+  );
+  const svg = await res.text();
 
   return (
     <div className={styles.container}>
@@ -28,11 +33,7 @@ export default function Home(props: { svg: string }) {
               <li>NextJS / Lit / Angular</li>
               <li>NodeJS with NestJS</li>
             </ul>
-            <Link
-              ref={aSvg}
-              href="https://wakatime.com/@2729ac0c-0ebb-4599-b424-3a6648627bff"
-              aria-label="Wakatime profile"
-            />
+            {svg && <WakaComponent svg={svg} />}
             <ul className={styles.socialicons}>
               {SOCIAL.map((social) => (
                 <li key={social.title}>
@@ -54,18 +55,4 @@ export default function Home(props: { svg: string }) {
       </main>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch(
-    "https://wakatime.com/badge/user/2729ac0c-0ebb-4599-b424-3a6648627bff.svg"
-  );
-  const svg = await res.text();
-
-  return {
-    props: {
-      svg: svg.replace(/<\/?a[^>]*>/g, ""),
-    },
-    revalidate: 43200, // 12h in seconds
-  };
 }

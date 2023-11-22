@@ -7,6 +7,7 @@ export default function Social() {
       {SOCIAL.map((social) => (
         <li key={social.title}>
           <Link
+            prefetch={false}
             href={social.href}
             title={social.title}
             className={styles[social.className]}

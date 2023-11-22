@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import me from "../assets/me.jpeg";
-import { SOCIAL } from "../config/social";
 import styles from "../styles/Home.module.scss";
+import Social from "./_components/social";
 import WakaComponent from "./_components/waka";
 
 export default async function HomePage() {
@@ -34,17 +33,7 @@ export default async function HomePage() {
               <li>NodeJS with NestJS</li>
             </ul>
             {svg && <WakaComponent svg={svg} />}
-            <ul className={styles.socialicons}>
-              {SOCIAL.map((social) => (
-                <li key={social.title}>
-                  <Link
-                    href={social.href}
-                    title={social.title}
-                    className={styles[social.className]}
-                  />
-                </li>
-              ))}
-            </ul>
+            <Social />
             <div className={styles.footer}>
               <p>
                 © <span id="date">{year}</span>

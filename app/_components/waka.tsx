@@ -12,7 +12,9 @@ export default function WakaComponent({ svg }: Readonly<WakaComponentProps>) {
 
   useEffect(() => {
     if (!aSvg.current) return;
-    aSvg.current.innerHTML = svg;
+    aSvg.current.innerHTML = svg
+      .replaceAll('<a xlink:href="https://wakatime.com/">', "")
+      .replaceAll("</a>", "");
   }, [svg]);
 
   return (

@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
+import "../styles/globals.scss";
 
 interface RootLayoutProps {
   children: React.ReactNode;

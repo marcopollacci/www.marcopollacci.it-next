@@ -6,10 +6,13 @@ interface CookieProps {
 }
 
 export default function Cookie({ domainGroupId }: Readonly<CookieProps>) {
-  const cookie = document.querySelector("#CookieBot");
-  if (cookie !== null || !domainGroupId || typeof window === "undefined") {
-    return null;
-  }
+  if (document) {
+    const cookie = document.querySelector("#CookieBot");
+    if (cookie !== null || !domainGroupId || typeof window === "undefined") {
+      return null;
+    }
 
-  return <CookieBot domainGroupId={domainGroupId} />;
+    return <CookieBot domainGroupId={domainGroupId} />;
+  }
+  return null;
 }

@@ -1,3 +1,4 @@
+"use client";
 import CookieBot from "react-cookiebot";
 
 interface CookieProps {

@@ -9,8 +9,6 @@ export default async function HomePage() {
   const year = new Date().getFullYear();
   const { COOKIEBOT = "" } = process.env;
 
-  console.log(COOKIEBOT);
-
   const res = await fetch(
     "https://wakatime.com/badge/user/2729ac0c-0ebb-4599-b424-3a6648627bff.svg",
     {

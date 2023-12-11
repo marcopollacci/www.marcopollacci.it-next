@@ -1,4 +1,3 @@
-"use client";
 import CookieBot from "react-cookiebot";
 
 interface CookieProps {
@@ -6,13 +5,11 @@ interface CookieProps {
 }
 
 export default function Cookie({ domainGroupId }: Readonly<CookieProps>) {
-  if (document) {
-    const cookie = document.querySelector("#CookieBot");
-    if (cookie !== null || !domainGroupId || typeof window === "undefined") {
-      return null;
-    }
-
-    return <CookieBot domainGroupId={domainGroupId} />;
+  const cookie =
+    typeof document !== "undefined" && document?.querySelector("#CookieBot");
+  if (cookie !== null || !domainGroupId || typeof window === "undefined") {
+    return null;
   }
-  return null;
+
+  return <CookieBot domainGroupId={domainGroupId} />;
 }

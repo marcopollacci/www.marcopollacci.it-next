@@ -11,6 +11,11 @@ export const SOCIAL: Social[] = [
     className: "dribble",
   },
   {
+    href: "https://www.linkedin.com/in/marcopollacci/",
+    title: "LinkedIn",
+    className: "linkedin",
+  },
+  {
     href: "https://github.com/marcopollacci",
     title: "GitHub",
     className: "github",
@@ -21,8 +26,14 @@ export const SOCIAL: Social[] = [
     className: "twitter",
   },
   {
+    href: "https://gdg.community.dev/gdg-bologna/",
+    title: "GDG Bologna",
+    className: "gdgbologna",
+  },
+  {
     href: "https://www.instagram.com/marco_pollacci",
     title: "Instagram",
     className: "instagram",
   },
+
 ];

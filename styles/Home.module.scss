@@ -64,6 +64,11 @@ $px16: fn.units(2);
   .dribble {
     @include mx.social("/images/dribble.png");
   }
+  .gdgbologna {
+    @include mx.social("/images/gdg_bologna.png");
+    width: fn.units(3);
+    height: fn.units(3);
+  }
   .instagram {
     @include mx.social("/images/insta.png");
   }
